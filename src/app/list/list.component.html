@@ -1,0 +1,46 @@
+<div class="form-group mt-4">
+  <button class="btn btn-secondary" type="button" (click)="cancel()">Cancel</button>
+</div>
+
+<div class="card">
+  <div class="card-body">
+      
+      <div class="table-responsive">
+          <table class="table" *ngIf='users && users.length'>
+              <thead>
+                  <tr>
+                      <th>Username</th>
+                      <th>Firstname</th>
+                      <th>Lastname</th>
+                      <th>Othername</th>
+                      <th>Email</th>
+                      <th>Phone</th>
+                      <th>Gender</th>
+                      <th>Address</th>
+                      <th>Date of Birth</th>
+                      <th>City</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor='let user of users'>
+                      
+                      <td><a [routerLink]="['/list', user.id]">{{ user.username }}</a></td>
+                      
+                      <td>{{ user.firstname }}</td>
+                      <td>{{ user.lastname }}</td>
+                      <td>{{ user.othernames }}</td>
+                      <td>{{ user.email }}</td>
+                      <td>{{ user.phone }}</td>
+                      <td>{{ user.gender }}</td>
+                      <td>{{ user.address }}</td>
+                      <td>{{ user.dob }}</td>
+                      <td>{{ user.city }}</td>
+                     
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+
+  </div>
+
+</div>

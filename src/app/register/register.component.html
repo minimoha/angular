@@ -1,0 +1,51 @@
+<form #registerForm="ngForm" (ngSubmit)="register()">
+  <h2 class="text-center text-primary">Register</h2>
+  <hr>
+
+  <div class="form-group">
+    <input type="text" class="form-control" required name="username" [(ngModel)]="model.username" placeholder="Username">
+  </div>
+
+
+  <div class="form-group">
+    <input type="text" class="form-control" required name="firstname" [(ngModel)]="model.firstname" placeholder="firstname">
+  </div>
+
+  <div class="form-group">
+    <input type="text" class="form-control" required name="lastname" [(ngModel)]="model.lastname" placeholder="lastname">
+  </div>
+
+  <div class="form-group">
+    <input type="text" class="form-control" required name="othernames" [(ngModel)]="model.othernames" placeholder="othernames">
+  </div>
+
+  <div class="form-group">
+    <input type="email" class="form-control" required name="firstname" [(ngModel)]="model.email" placeholder="email">
+  </div>
+
+  <div class="form-group">
+    <input type="tel" class="form-control" required name="phone" [(ngModel)]="model.phone" placeholder="phone">
+  </div>
+
+  <div class="form-group">
+    <input type="text" class="form-control" required name="gender" [(ngModel)]="model.gender" placeholder="gender">
+  </div>
+
+  <div class="form-group">
+    <input type="text" class="form-control" required name="address" [(ngModel)]="model.address" placeholder="address">
+  </div>
+
+  <div class="form-group">
+    <input type="date" class="form-control" required name="dob" [(ngModel)]="model.dob" placeholder="date of brth">
+  </div>
+
+  <div class="form-group">
+    <input type="text" class="form-control" required name="city" [(ngModel)]="model.city" placeholder="city">
+  </div>
+
+  <div class="form-group text-center">
+    <button class="btn btn-success" type="submit">Register</button>
+    <button class="btn btn-default" type="button" (click)="cancel()">Cancel</button>
+  </div>
+
+</form>
